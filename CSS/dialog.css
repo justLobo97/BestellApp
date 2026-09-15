@@ -1,17 +1,17 @@
-dialog {
+/* Basket Dialog */
+.basket-dialog {
     background-color: #363534;
     border: none;
     border-radius: 30px 30px 0 0;
 
     position: fixed;
-    bottom: 81px;
+    bottom: 80px;
     left: 20px;
 
     width: calc(100% - 40px);
     padding: 25px 16px;
 }
 
-/* X Button */
 .x-button {
     position: absolute;
     top: 22px;
@@ -21,8 +21,7 @@ dialog {
     padding: 0;
 }
 
-/* Überschrift */
-dialog h3 {
+.basket-dialog h3 {
     color: #FDEADC;
     font-weight: bold;
     font-size: 32px;
@@ -30,14 +29,12 @@ dialog h3 {
     margin-bottom: 14px;
 }
 
-/* Basket */
 .basket-container {
     display: flex;
     flex-direction: column;
-    gap: clamp(6px, 1.5vh, 10px);
+    gap: 8px;
 }
 
-/* Scrollbarer Produktbereich */
 .basket-scroll {
     max-height: 38vh;
     overflow-y: auto;
@@ -48,7 +45,7 @@ dialog h3 {
 .basket-items {
     display: flex;
     flex-direction: column;
-    gap: clamp(6px, 1.5vh, 10px);
+    gap: 8px;
 }
 
 .basket-scroll::-webkit-scrollbar {
@@ -64,33 +61,29 @@ dialog h3 {
     background: transparent;
 }
 
-/* Einzelnes Produkt */
 .basket-contents {
     background-color: #FDEADC;
-    border-radius: clamp(14px, 4vw, 20px);
-    padding: clamp(10px, 3vw, 16px);
-    min-height: clamp(85px, 12vh, 120px);
+    border-radius: 20px;
+    padding: 16px;
+    min-height: 100px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* Produktname */
-.basket-contents > p {
+.basket-contents>p {
     color: #363534;
-    font-size: clamp(15px, 4.5vw, 20px);
+    font-size: 18px;
     font-weight: 600;
 }
 
-/* Untere Zeile */
 .contents-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Buttons */
 .add-delete-buttons {
     display: flex;
     align-items: center;
@@ -128,14 +121,12 @@ dialog h3 {
     height: 29px;
 }
 
-/* Produktpreis */
-.contents-footer > p {
+.contents-footer>p {
     color: #363534;
     font-size: 20px;
     font-weight: 600;
 }
 
-/* Preise */
 .price,
 .deliver-fee,
 .total-price {
@@ -143,22 +134,20 @@ dialog h3 {
     justify-content: space-between;
     align-items: center;
     color: white;
-    font-size: clamp(15px, 4.5vw, 20px);
+    font-size: 18px;
 }
 
-/* Total */
 .total-price {
     border-top: 2px solid #FDEADC;
-    padding-top: clamp(6px, 1.5vh, 10px);
+    padding-top: 8px;
     margin-top: 2px;
 }
 
 .total-price p {
-    font-size: clamp(17px, 5vw, 22px);
+    font-size: 20px;
     font-weight: bold;
 }
 
-/* Buy Button */
 .buy-now {
     align-self: center;
     border: none;
@@ -166,9 +155,79 @@ dialog h3 {
     background-color: #E76C1F;
     color: white;
 
-    padding: clamp(8px, 2vh, 12px) clamp(18px, 5vw, 24px);
+    padding: 10px 24px;
 
     font-family: 'Palanquin';
-    font-size: clamp(16px, 4.5vw, 20px);
+    font-size: 18px;
     font-weight: bold;
 }
+
+/* Order Confirmed Dialog */
+
+.order-confirmed-dialog {
+    background-color: #363534;
+    border: none;
+    border-radius: 30px;
+
+    position: fixed;
+    left: 15px;
+    top: 100px;
+
+    width: calc(100% - 30px);
+    padding: 32px 32px 40px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.order-confirmed-close-button {
+    border: none;
+    background: transparent;
+    right: 30px;
+    top: 20px;
+    padding:0;
+    position: absolute;
+    color: #FDEADC;
+}
+
+.delivery-content {
+    color: #FDEADC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.delivery-content img {
+    width: 80px;
+    animation: drive 2s ease-in-out infinite;
+}
+
+@keyframes drive {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.delivery-content h4 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.delivery-content p{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+

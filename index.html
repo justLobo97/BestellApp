@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestellApp</title>
     <script src="script.js" defer></script>
-    <script src="array.js" defer></script>
-    <script src="templates.js" defer></script>
+    <script src="./JS/array.js" defer></script>
+    <script src="./JS/templates.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="dialog.css">
+    <link rel="stylesheet" href="./CSS/fonts.css">
+    <link rel="stylesheet" href="./CSS/dialog.css">
 </head>
 
 <body>
@@ -223,7 +223,7 @@
         </div>
     </footer>
 
-    <dialog open>
+    <dialog class="basket-dialog">
 
         <button class="x-button">
             <img src="./assets/logo/close.png" alt="Close-Icon">
@@ -311,6 +311,15 @@
 
         </div>
 
+    </dialog>
+
+    <dialog class="order-confirmed-dialog">
+        <button class="order-confirmed-close-button"><img src="./assets/logo/close.png" alt="Close-Icon"></button>
+        <div class="delivery-content">
+            <img src="./assets/logo/deliver.png" alt="Deliver-Car-Icon">
+            <h4>Order confirmed!</h4>
+            <p>Your food is on the way!</p>
+        </div>
     </dialog>
 
 </body>
