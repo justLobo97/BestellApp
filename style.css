@@ -145,6 +145,7 @@ header {
     flex-direction: column;
     gap: 16px;
 }
+
 .menu-card {
     display: flex;
     flex-direction: column;
@@ -204,7 +205,7 @@ header {
     margin-top: 32px;
     gap: 10px;
     margin-bottom: 81.2px;
-    
+
 }
 
 .footer-container p {
@@ -213,66 +214,16 @@ header {
 }
 
 .mobile-bar {
+    height: 81px;
+    padding: 0 25px;
+
     display: flex;
     justify-content: space-between;
-    padding: 24px 25px;
+    align-items: center;
+
     background-color: #363534;
     position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 20;
-}
-
-dialog {
-    background-color: #3d3c3b;
-    border-radius: 30px 30px 0 0;
-    border: none;
-
-    width: calc(100% - 40px);
-    height: 550px;
-
-    position: fixed;
-    left: 20px;
-    bottom: 0px;
-    margin: 0;
-}
-
-dialog h3 {
-    color: #FDEADC;
-    font-weight: bold;
-    font-size: 32px;
-    text-align: center;
-}
-
-.basket-contents {
-    background-color: #FDEADC;
-    border-radius: 20px;
-    padding: 16px;
-}
-.contents-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.add-delete-buttons {
-    display: flex;
-    align-items: center;
-}
-
-.add-delete-buttons button {
-    border: none;
-    background: transparent;
-    padding: 0;
-}
-
-.add-delete-buttons button img {
-    display: block;
-    width: 24px;
-    height: 24px;
-}
-
-.add-delete-buttons button:last-child img {
-    width: 13px;
-    height: 29px;
 }

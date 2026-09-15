@@ -1,0 +1,174 @@
+dialog {
+    background-color: #363534;
+    border: none;
+    border-radius: 30px 30px 0 0;
+
+    position: fixed;
+    bottom: 81px;
+    left: 20px;
+
+    width: calc(100% - 40px);
+    padding: 25px 16px;
+}
+
+/* X Button */
+.x-button {
+    position: absolute;
+    top: 22px;
+    right: 25px;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+/* Überschrift */
+dialog h3 {
+    color: #FDEADC;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+/* Basket */
+.basket-container {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(6px, 1.5vh, 10px);
+}
+
+/* Scrollbarer Produktbereich */
+.basket-scroll {
+    max-height: 38vh;
+    overflow-y: auto;
+    padding: 10px 10px 10px 0;
+    margin-right: -10px;
+}
+
+.basket-items {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(6px, 1.5vh, 10px);
+}
+
+.basket-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.basket-scroll::-webkit-scrollbar-thumb {
+    background-color: #FDEADC;
+    border-radius: 10px;
+}
+
+.basket-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Einzelnes Produkt */
+.basket-contents {
+    background-color: #FDEADC;
+    border-radius: clamp(14px, 4vw, 20px);
+    padding: clamp(10px, 3vw, 16px);
+    min-height: clamp(85px, 12vh, 120px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Produktname */
+.basket-contents > p {
+    color: #363534;
+    font-size: clamp(15px, 4.5vw, 20px);
+    font-weight: 600;
+}
+
+/* Untere Zeile */
+.contents-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Buttons */
+.add-delete-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.add-delete-buttons button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 24px;
+    height: 29px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-delete-buttons button img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.add-delete-buttons button:last-child img {
+    width: auto;
+    height: 13px;
+}
+
+.add-delete-buttons p {
+    color: #363534;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 24px;
+    height: 29px;
+}
+
+/* Produktpreis */
+.contents-footer > p {
+    color: #363534;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Preise */
+.price,
+.deliver-fee,
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: clamp(15px, 4.5vw, 20px);
+}
+
+/* Total */
+.total-price {
+    border-top: 2px solid #FDEADC;
+    padding-top: clamp(6px, 1.5vh, 10px);
+    margin-top: 2px;
+}
+
+.total-price p {
+    font-size: clamp(17px, 5vw, 22px);
+    font-weight: bold;
+}
+
+/* Buy Button */
+.buy-now {
+    align-self: center;
+    border: none;
+    border-radius: 30px;
+    background-color: #E76C1F;
+    color: white;
+
+    padding: clamp(8px, 2vh, 12px) clamp(18px, 5vw, 24px);
+
+    font-family: 'Palanquin';
+    font-size: clamp(16px, 4.5vw, 20px);
+    font-weight: bold;
+}

@@ -10,6 +10,7 @@
     <script src="templates.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="dialog.css">
 </head>
 
 <body>
@@ -223,36 +224,93 @@
     </footer>
 
     <dialog open>
-        <button class="x-button"><img src="./assets/logo/close.png" alt="Close-Icon"></button>
-        <h3>Your Basket</h3>
-        <div class="basket-container">
 
-            <div class="basket-contents">
-                <p>1x Veggie mushroom black burger</p>
-                <div class="contents-footer">
-                    <div class="add-delete-buttons">
-                        <button><img src="./assets/logo/delete.png" alt="Delete-Icon"></button>
-                        <p>1</p>
-                        <button><img src="./assets/logo/+.png" alt="Plus-Icon"></button>
+        <button class="x-button">
+            <img src="./assets/logo/close.png" alt="Close-Icon">
+        </button>
+
+        <h3>Your Basket</h3>
+
+        <div class="basket-container">
+            <div class="basket-scroll">
+                <div class="basket-items">
+
+                    <div class="basket-contents">
+                        <p>1 x Veggie mushroom black burger</p>
+
+                        <div class="contents-footer">
+                            <div class="add-delete-buttons">
+                                <button>
+                                    <img src="./assets/logo/delete.png" alt="Delete-Icon">
+                                </button>
+                                <p>1</p>
+                                <button>
+                                    <img src="./assets/logo/+.png" alt="Plus-Icon">
+                                </button>
+                            </div>
+
+                            <p>16,90€</p>
+                        </div>
                     </div>
-                    <p>16,90€</p>
+
+                    <div class="basket-contents">
+                        <p>1 x Pizza Margherita</p>
+
+                        <div class="contents-footer">
+                            <div class="add-delete-buttons">
+                                <button>
+                                    <img src="./assets/logo/delete.png" alt="Delete-Icon">
+                                </button>
+                                <p>1</p>
+                                <button>
+                                    <img src="./assets/logo/+.png" alt="Plus-Icon">
+                                </button>
+                            </div>
+
+                            <p>11,90€</p>
+                        </div>
+                    </div>
+
+                    <div class="basket-contents">
+                        <p>1 x Mini green Salad</p>
+
+                        <div class="contents-footer">
+                            <div class="add-delete-buttons">
+                                <button>
+                                    <img src="./assets/logo/delete.png" alt="Delete-Icon">
+                                </button>
+                                <p>1</p>
+                                <button>
+                                    <img src="./assets/logo/+.png" alt="Plus-Icon">
+                                </button>
+                            </div>
+
+                            <p>7,90€</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
             <div class="price">
                 <p>Subtotal</p>
-                <p>37,70€</p>
+                <p>36,70 €</p>
             </div>
+
             <div class="deliver-fee">
-                <p>Delivery Fee</p>
+                <p>Delivery fee</p>
                 <p>4,99€</p>
             </div>
+
             <div class="total-price">
                 <p>Total</p>
                 <p>41,69€</p>
             </div>
+
             <button class="buy-now">Buy now (41,69€)</button>
+
         </div>
+
     </dialog>
 
 </body>
