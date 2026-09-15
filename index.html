@@ -46,8 +46,7 @@
         </div>
 
         <div class="menu-section">
-        <div class="menu-wrapper" id="menu-wrapper">
-            
+        <div class="menu-wrapper" id="menu-wrapper"> 
         </div>
         </div>
 
@@ -70,15 +69,15 @@
             <a href="">
                 <img src="./assets/logo/orders.png" alt="Orders-Icon">
             </a>
-            <a href="">
+            <a id="basket-button" onclick="openBasket()">
                 <img src="./assets/logo/basket.png" alt="Basket-Icon">
             </a>
         </div>
     </footer>
 
-    <dialog class="basket-dialog">
+    <dialog class="basket-dialog" id="basket-dialog">
 
-        <button class="x-button">
+        <button class="x-button" onclick="closeDialog(basketDialog)">
             <img src="./assets/logo/close.png" alt="Close-Icon">
         </button>
 
@@ -166,7 +165,7 @@
 
     </dialog>
 
-    <dialog class="order-confirmed-dialog">
+    <dialog class="order-confirmed-dialog" onclick="closeDialog(orderConfirmedDialog)">
         <button class="order-confirmed-close-button"><img src="./assets/logo/close.png" alt="Close-Icon"></button>
         <div class="delivery-content">
             <img src="./assets/logo/deliver.png" alt="Deliver-Car-Icon">
