@@ -110,6 +110,8 @@ header {
 .menu-title {
     position: relative;
     margin-bottom: 32px;
+    width: 100vw;
+    margin-left: -20px;
 }
 
 .menu-title:not(:first-child) {

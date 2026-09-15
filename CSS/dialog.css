@@ -182,6 +182,10 @@
     justify-content: center;
 }
 
+.order-confirmed-dialog:not([open]) {
+    display: none;
+}
+
 .order-confirmed-close-button {
     border: none;
     background: transparent;
