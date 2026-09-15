@@ -21,7 +21,7 @@ for (let i = 0; i < menu.length; i++) {
             <p>${menu[i].description}</p>
                 <div class="card-footer">
                     <p>${menu[i].price.toFixed(2).replace('.', ',')}€</p>
-                    <button>Add to basket</button>
+                    <button onclick="addToBasket(${i})">Add to basket</button>
                 </div>
         </div>`;
 }
