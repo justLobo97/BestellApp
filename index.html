@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./CSS/dialog.css">
 </head>
 
-<body>
+<body onload="renderBasket()">
     <header>
         <div class="header-img">
             <img src="./assets/logo/Logo 02.png" alt="BestellApp-logo">
@@ -46,8 +46,8 @@
         </div>
 
         <div class="menu-section">
-        <div class="menu-wrapper" id="menu-wrapper"> 
-        </div>
+            <div class="menu-wrapper" id="menu-wrapper">
+            </div>
         </div>
 
     </main>
@@ -69,8 +69,9 @@
             <a href="">
                 <img src="./assets/logo/orders.png" alt="Orders-Icon">
             </a>
-            <a id="basket-button" onclick="openBasket()">
-                <img src="./assets/logo/basket.png" alt="Basket-Icon">
+            <a id="basket-button" class="basket-button" onclick="openBasket()">
+                <img id="basket-icon" class="basket-icon" src="./assets/logo/basket.png" alt="Basket-Icon">
+                <span class="basket-count" id="basket-count"></span>
             </a>
         </div>
     </footer>
@@ -83,90 +84,36 @@
 
         <h3>Your Basket</h3>
 
-        <div class="basket-container">
+        <div class="basket-container" id="basket-container">
             <div class="basket-scroll">
                 <div class="basket-items" id="basket-items">
-
-                    <div class="basket-contents">
-                        <p>1 x Veggie mushroom black burger</p>
-
-                        <div class="contents-footer">
-                            <div class="add-delete-buttons">
-                                <button>
-                                    <img src="./assets/logo/delete.png" alt="Delete-Icon">
-                                </button>
-                                <p>1</p>
-                                <button>
-                                    <img src="./assets/logo/+.png" alt="Plus-Icon">
-                                </button>
-                            </div>
-
-                            <p>16,90€</p>
-                        </div>
-                    </div>
-
-                    <div class="basket-contents">
-                        <p>1 x Pizza Margherita</p>
-
-                        <div class="contents-footer">
-                            <div class="add-delete-buttons">
-                                <button>
-                                    <img src="./assets/logo/delete.png" alt="Delete-Icon">
-                                </button>
-                                <p>1</p>
-                                <button>
-                                    <img src="./assets/logo/+.png" alt="Plus-Icon">
-                                </button>
-                            </div>
-
-                            <p>11,90€</p>
-                        </div>
-                    </div>
-
-                    <div class="basket-contents">
-                        <p>1 x Mini green Salad</p>
-
-                        <div class="contents-footer">
-                            <div class="add-delete-buttons">
-                                <button>
-                                    <img src="./assets/logo/delete.png" alt="Delete-Icon">
-                                </button>
-                                <p>1</p>
-                                <button>
-                                    <img src="./assets/logo/+.png" alt="Plus-Icon">
-                                </button>
-                            </div>
-
-                            <p>7,90€</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
-            <div class="price">
-                <p>Subtotal</p>
-                <p>36,70 €</p>
+            <div class="basket-summary" id="basket-summary">
+                <div class="price">
+                    <p>Subtotal</p>
+                    <p id="subtotal"></p>
+                </div>
+
+                <div class="deliver-fee">
+                    <p>Delivery fee (free over 20€)</p>
+                    <p id="deliver-fee"></p>
+                </div>
+
+                <div class="total-price">
+                    <p>Total</p>
+                    <p id="total-price"></p>
+                </div>
+
+                <button class="buy-now" id="buy-now" onclick="openOrderDialog()"></button>
             </div>
-
-            <div class="deliver-fee">
-                <p>Delivery fee</p>
-                <p>4,99€</p>
-            </div>
-
-            <div class="total-price">
-                <p>Total</p>
-                <p>41,69€</p>
-            </div>
-
-            <button class="buy-now">Buy now (41,69€)</button>
-
         </div>
 
     </dialog>
 
-    <dialog class="order-confirmed-dialog" onclick="closeDialog(orderConfirmedDialog)">
-        <button class="order-confirmed-close-button"><img src="./assets/logo/close.png" alt="Close-Icon"></button>
+    <dialog class="order-confirmed-dialog" id="order-confirmed-dialog">
+        <button onclick="closeOrderDialog()" class="order-confirmed-close-button"><img src="./assets/logo/close.png" alt="Close-Icon"></button>
         <div class="delivery-content">
             <img src="./assets/logo/deliver.png" alt="Deliver-Car-Icon">
             <h4>Order confirmed!</h4>

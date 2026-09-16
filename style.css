@@ -4,7 +4,11 @@
     scroll-behavior: smooth;
     font-family: 'Palanquin';
     line-height: 120%;
-    letter-spacing: 0%;
+}
+
+button,
+a {
+    cursor: pointer;
 }
 
 header {
@@ -229,3 +233,42 @@ header {
     width: 100%;
     z-index: 20;
 }
+
+.basket-button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: -2px;
+}
+
+.basket-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.basket-icon-active {
+    width: 24px;
+    height: 24px;
+    margin: 3px;
+}
+
+.basket-count {
+    position: absolute;
+    top: -12px;
+    right: -9px;
+    line-height: 14px;
+    background-color: #FDEADC;
+    color: #E76C1F;
+    border: transparent;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
