@@ -1,0 +1,44 @@
+@media (min-width: 768px) {
+
+    .landing-container {
+        padding: 24px 50px;
+    }
+
+    .menu-wrapper {
+        padding: 16px 70px;
+    }
+
+    .menu-title {
+        width: calc(100% + 140px);
+        margin-left: -70px;
+    }
+
+    .menu-card {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .menu-card img {
+        width: 150px;
+        height: 100px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .menu-info {
+        flex-grow: 1;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 0;
+        white-space: nowrap;
+        align-items: flex-end;
+    }
+
+    .footer-container {
+        margin-bottom: 80.2px;
+    }
+
+}

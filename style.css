@@ -114,7 +114,7 @@ header {
 .menu-title {
     position: relative;
     margin-bottom: 32px;
-    width: 100vw;
+    width: calc(100% + 40px);
     margin-left: -20px;
 }
 
@@ -271,4 +271,5 @@ header {
     font-size: 12px;
     font-weight: bold;
 }
+
 

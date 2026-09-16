@@ -17,8 +17,10 @@ for (let i = 0; i < menu.length; i++) {
     menuWrapper.innerHTML += `
         <div class="menu-card">
             <img src="${menu[i].image}" alt="${menu[i].alt}">
-            <h3>${menu[i].name}</h3>
-            <p>${menu[i].description}</p>
+                <div class="menu-info">
+                    <h3>${menu[i].name}</h3>
+                    <p>${menu[i].description}</p>
+                </div>
                 <div class="card-footer">
                     <p>${menu[i].price.toFixed(2).replace('.', ',')}€</p>
                     <button onclick="addToBasket(${i})">Add to basket</button>
