@@ -31,6 +31,27 @@ function addToBasket(index) {
         });
     }
     renderBasket();
+    updateAddButton(index, item);
+}
+
+function updateAddButton(index, item) {
+    let addButton = document.getElementById(`add-button-${index}`);
+
+    for (let i = 0; i < basket.length; i++) {
+        if (basket[i].name === item.name) {
+            addButton.innerHTML = `Added ${basket[i].quantity}`;
+            addButton.style.color = "#E76C1F";
+        }
+    }
+}
+
+function resetAddButtons() {
+    for (let i = 0; i < menu.length; i++) {
+        let addButton = document.getElementById(`add-button-${i}`);
+
+        addButton.innerHTML = "Add to basket";
+        addButton.style.color = "#363534";
+    }
 }
 
 function renderBasket() {
@@ -107,6 +128,8 @@ function deleteItem(index) {
 
 function openOrderDialog() {
     basketDialog.close();
+    basketDialog.classList.add('basket-hidden');
+    resetAddButtons();
     orderConfirmedDialog.showModal();
 }
 
@@ -114,4 +137,6 @@ function closeOrderDialog() {
     orderConfirmedDialog.close();
     basket = [];
     renderBasket();
+    basketDialog.classList.remove('basket-hidden');
+    
 }

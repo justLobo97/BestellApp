@@ -23,7 +23,7 @@ for (let i = 0; i < menu.length; i++) {
                 </div>
                 <div class="card-footer">
                     <p>${menu[i].price.toFixed(2).replace('.', ',')}€</p>
-                    <button onclick="addToBasket(${i})">Add to basket</button>
+                    <button id="add-button-${i}" onclick="addToBasket(${i})">Add to basket</button>
                 </div>
         </div>`;
 }

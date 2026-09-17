@@ -20,6 +20,10 @@ header {
     padding: 18px 16px;
 }
 
+.header-icon {
+    display: none;
+}
+
 .header-img {
     width: 90px;
     height: 37px;

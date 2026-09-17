@@ -1,0 +1,179 @@
+@media (min-width: 1200px) {
+
+    header {
+        padding: 18px 30px 18px 60px;
+        height: 128px;
+    }
+
+    .header-icon {
+        margin-left: auto;
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .landing-container {
+        padding: 0;
+    }
+
+    .hero-img {
+        border-radius: 0;
+    }
+
+    .burger-logo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .landing-description {
+        position: relative;
+        margin-top: 90px;
+    }
+
+    .description-box {
+        position: relative;
+    }
+
+    .description-box h1 {
+        font-size: 48px;
+    }
+
+    .description-box h1 span {
+        font-size: 48px;
+    }
+
+    .description-box p {
+        margin-top: 10px;
+        font-size: 24px;
+    }
+
+    .rating-box {
+        position: absolute;
+        top: 43px;
+        left: calc(49% + 180px);
+    }
+
+    .menu-logo {
+        left: 9%;
+        top: 42px;
+        width: 88px;
+        height: 91px;
+    }
+
+    .menu-header h2 {
+        font-size: 40px;
+        transform: translateX(-360px);
+    }
+
+    .menu-wrapper {
+        align-items: flex-start;
+        padding: 0px 70px;
+        margin-bottom: 50px;
+    }
+
+    .menu-card {
+        width: 713px;
+    }
+
+    .desktop-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .menu-section {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+    }
+
+    .basket-container {
+        gap: 20px;
+    }
+
+    .basket-wrapper {
+        grid-column: 1;
+        grid-row: 1;
+
+        justify-self: end;
+        align-self: start;
+
+        width: 435px;
+        margin-top: 32px;
+
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .basket-dialog {
+        display: block;
+        position: static;
+        padding: 30px;
+        width: 435px;
+        height: 762px;
+        border-radius: 30px 0 0 30px;
+    }
+
+    .basket-summary {
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .basket-dialog h3 {
+        font-size: 40px;
+    }
+
+    .basket-contents>p {
+        font-size: 22px;
+    }
+
+    .contents-footer>p {
+        font-size: 22px;
+    }
+
+    .price,
+    .deliver-fee {
+        font-size: 20px;
+    }
+
+    .total-price p {
+        font-size: 22px;
+    }
+
+    .x-button {
+        display: none;
+    }
+
+    .basket-hidden {
+        display: none;
+    }
+
+    .order-confirmed-dialog {
+        width: calc(37% - 20px);
+        left: 493px;
+        top: 135px;
+    }
+
+    .card-footer button {
+        width: 95px;
+    }
+
+    .buy-now {
+        font-size: 28px;
+        margin-top: 5px;
+    }
+
+    .footer-container {
+        margin-bottom: 0;
+    }
+
+    .mobile-bar {
+        display: none;
+    }
+
+    .footer-container {
+        height: 128px;
+        flex-direction: row-reverse;
+        gap: 72px;
+    }
+}

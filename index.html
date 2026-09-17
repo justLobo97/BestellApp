@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./CSS/fonts.css">
     <link rel="stylesheet" href="./CSS/dialog.css">
-    <link rel="stylesheet" href="./CSS/desktop.css">
     <link rel="stylesheet" href="./CSS/tablet.css">
+    <link rel="stylesheet" href="./CSS/desktop.css">
 </head>
 
 <body onload="renderBasket()">
-    
+
     <header>
         <div class="header-img">
             <img src="./assets/logo/Logo 02.png" alt="BestellApp-logo">
         </div>
+        <img class="header-icon" src="./assets/logo/menu.png" alt="Menu-Icon">
     </header>
 
     <main>
@@ -48,11 +49,51 @@
 
         </div>
 
-        <div class="menu-section">
-            <div class="menu-wrapper" id="menu-wrapper">
+        <div class="desktop-layout">
+
+            <div class="menu-section">
+                <div class="menu-wrapper" id="menu-wrapper">
+                </div>
+            </div>
+
+            <div class="basket-wrapper">
+
+                <dialog class="basket-dialog" id="basket-dialog">
+
+                    <button class="x-button" onclick="closeDialog(basketDialog)">
+                        <img src="./assets/logo/close.png" alt="Close-Icon">
+                    </button>
+
+                    <h3>Your Basket</h3>
+
+                    <div class="basket-container" id="basket-container">
+                        <div class="basket-scroll">
+                            <div class="basket-items" id="basket-items">
+                            </div>
+                        </div>
+
+                        <div class="basket-summary" id="basket-summary">
+                            <div class="price">
+                                <p>Subtotal</p>
+                                <p id="subtotal"></p>
+                            </div>
+
+                            <div class="deliver-fee">
+                                <p>Delivery fee (free over 20€)</p>
+                                <p id="deliver-fee"></p>
+                            </div>
+
+                            <div class="total-price">
+                                <p>Total</p>
+                                <p id="total-price"></p>
+                            </div>
+
+                            <button class="buy-now" id="buy-now" onclick="openOrderDialog()"></button>
+                        </div>
+                    </div>
+                </dialog>
             </div>
         </div>
-
     </main>
 
     <footer>
@@ -79,44 +120,11 @@
         </div>
     </footer>
 
-    <dialog class="basket-dialog" id="basket-dialog">
 
-        <button class="x-button" onclick="closeDialog(basketDialog)">
-            <img src="./assets/logo/close.png" alt="Close-Icon">
-        </button>
-
-        <h3>Your Basket</h3>
-
-        <div class="basket-container" id="basket-container">
-            <div class="basket-scroll">
-                <div class="basket-items" id="basket-items">
-                </div>
-            </div>
-
-            <div class="basket-summary" id="basket-summary">
-                <div class="price">
-                    <p>Subtotal</p>
-                    <p id="subtotal"></p>
-                </div>
-
-                <div class="deliver-fee">
-                    <p>Delivery fee (free over 20€)</p>
-                    <p id="deliver-fee"></p>
-                </div>
-
-                <div class="total-price">
-                    <p>Total</p>
-                    <p id="total-price"></p>
-                </div>
-
-                <button class="buy-now" id="buy-now" onclick="openOrderDialog()"></button>
-            </div>
-        </div>
-
-    </dialog>
 
     <dialog class="order-confirmed-dialog" id="order-confirmed-dialog">
-        <button onclick="closeOrderDialog()" class="order-confirmed-close-button"><img src="./assets/logo/close.png" alt="Close-Icon"></button>
+        <button onclick="closeOrderDialog()" class="order-confirmed-close-button"><img src="./assets/logo/close.png"
+                alt="Close-Icon"></button>
         <div class="delivery-content">
             <img src="./assets/logo/deliver.png" alt="Deliver-Car-Icon">
             <h4>Order confirmed!</h4>
